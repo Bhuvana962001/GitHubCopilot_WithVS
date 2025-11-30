@@ -65,6 +65,99 @@ section h3 {
   background-color: #f9f9f9;
 }
 
+/* Participants area inside activity card */
+.participants {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e0e0e0;
+  font-size: 14px;
+  color: #444;
+}
+
+.participants strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+/* participant list */
+.participant-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.participant-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #eceff9;
+  border-radius: 20px;
+  width: fit-content;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  color: #233;
+  font-size: 13px;
+}
+
+/* delete button next to participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+
+
+/* removal animation: fade & slide */
+.participant-item {
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.participant-item.removing {
+  opacity: 0;
+  transform: translateX(8px) scale(0.98);
+}
+
+/* small circular initial badge */
+.participant-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e8eaf6;
+  color: #1a237e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* empty state */
+.no-participants {
+  color: #666;
+  font-style: italic;
+  padding: 6px 0;
+}
+
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
