@@ -83,8 +83,8 @@ section h3 {
 
 /* participant list */
 .participant-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -103,6 +103,38 @@ section h3 {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03);
   color: #233;
   font-size: 13px;
+}
+
+/* delete button next to participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+
+
+/* removal animation: fade & slide */
+.participant-item {
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.participant-item.removing {
+  opacity: 0;
+  transform: translateX(8px) scale(0.98);
 }
 
 /* small circular initial badge */
